@@ -1,2 +1,8 @@
-<h1>Flights#index</h1>
-<p>Find me in app/views/flights/index.html.erb</p>
+<h1>Search your flight</h1>
+<%= simple_form_for :search, url: flights_path, method: :get do |f| %>
+  <%= f.input :departure_airport, collection: @airports, label_method: :code, value_method: :id%>
+  <%= f.input :arrival_airport, collection: @airports, label_method: :code, value_method: :id %>
+  <%= f.input :start_datetime, collection: %>
+  <%= f.input :passengers, collection: [1, 2, 3, 4] %>
+  <%= f.button :submit, "Search" %>
+<% end %>
