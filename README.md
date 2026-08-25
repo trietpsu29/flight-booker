@@ -1,24 +1,42 @@
-# README
+# Flight Booker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the project from [The Odin Project](https://www.theodinproject.com/) curriculum — a flight booking application built with **Ruby on Rails**, focusing on advanced forms, nested forms, and model associations.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- Search for available flights
+- Select a flight
+- Enter information for multiple passengers
+- Create bookings with associated passengers
+- Display booking information
 
-* System dependencies
+## Preview
 
-* Configuration
+### Flight Search
 
-* Database creation
+![Flight search](screenshots/search.PNG)
 
-* Database initialization
+### Booking Form
 
-* How to run the test suite
+![Booking form](screenshots/booking.PNG)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Skills Learned
 
-* Deployment instructions
+### Ruby on Rails
 
-* ...
+- Advanced forms with Simple Form
+- Select fields and radio buttons
+- Prepopulating form data
+- Nested forms with `fields_for`
+- `accepts_nested_attributes_for`
+- Model associations
+- Strong Parameters
+- RESTful routing
+
+## Challenges
+
+- Passing the selected flight and passenger count to the booking form
+- Prepopulating booking information from the selected flight
+- Creating multiple Passenger objects for one Booking
+- Handling nested passenger attributes
+- Saving a Booking and its associated Passengers together
