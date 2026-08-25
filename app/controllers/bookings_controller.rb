@@ -7,9 +7,15 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
+    puts "=========="
+    puts "BOOKING: #{@booking.inspect}"
+    puts "PASSENGERS: #{@booking.passengers.inspect}"
+    puts "=========="
+
     if @booking.save
       redirect_to booking_path(@booking)
     else
+      puts @booking.errors.full_messages
       render :new, status: :unprocessable_entity
     end
   end
@@ -20,6 +26,6 @@ class BookingsController < ApplicationController
 
 private
   def booking_params
-    params.expect(booking: [ :flight_id, passengers_attributes: [ :name, :email ] ])
+    params.expect(booking: [ :flight_id, passengers_attributes: [ [ :name, :email ] ] ])
   end
 end

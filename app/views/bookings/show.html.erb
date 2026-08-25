@@ -4,7 +4,11 @@
 <p>Date: <%= @booking.flight.start_datetime %></p>
 <p>Duration: <%= @booking.flight.duration / 60 %>h</p>
 <h3>Passengers</h3>
-<% @booking.passengers.each do |p| %>
-  <p>Name: <%= p.name %></p>
-  <p>Email: <%= p.email %></p>
-<% end %>
+<ol>
+  <% @booking.passengers.each do |p| %>
+    <li>
+      <p>Name: <%= p.name %></p>
+      <p>Email: <%= p.email %></p>
+    </li>
+  <% end %>
+</ol>

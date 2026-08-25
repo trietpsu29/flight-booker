@@ -5,8 +5,10 @@
   <p>Date: <%= @booking.flight.start_datetime %></p>
   <p>Duration: <%= @booking.flight.duration / 60 %>h</p>
   <%= f.simple_fields_for :passengers do |p| %>
-    <%= p.input :name %>
-    <%= p.input :email %>
+    <h3>Passenger <%= p.index + 1 %></h3>
+    <p><%= p.input :name %></p>
+    <p><%= p.input :email %></p>
   <% end %>
-  <%= f.button :submit, "Book now!" %>
+  <%= f.input :flight_id, as: :hidden, value: @booking.flight_id %>
+  <p><%= f.button :submit, "Book now!" %></p>
 <% end %>

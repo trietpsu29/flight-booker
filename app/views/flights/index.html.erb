@@ -20,6 +20,8 @@
       </li>
     <% end %>
     <p><%= f.button :submit, "Book!" %></p>
-    <%= f.input :passengers, as: :hidden%>
+    <% if params[:search].present?%>
+      <%= f.input :passengers, as: :hidden, input_html: { value: params[:search][:passengers] } %>
+    <% end %>
   <% end %>
 </ul>
