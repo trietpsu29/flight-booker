@@ -2,7 +2,23 @@
 <%= simple_form_for :search, url: flights_path, method: :get do |f| %>
   <%= f.input :departure_airport, collection: @airports, label_method: :code, value_method: :id%>
   <%= f.input :arrival_airport, collection: @airports, label_method: :code, value_method: :id %>
-  <%= f.input :start_datetime, collection: %>
+  <%= f.input :start_datetime, collection: @flight_dates%>
   <%= f.input :passengers, collection: [1, 2, 3, 4] %>
   <%= f.button :submit, "Search" %>
 <% end %>
+<h2>Available Flights</h2>
+<ul>
+  <%= simple_form_for :book, url: new_booking_path, method: :get do |f| %>
+    <% @flights.each do |flight| %>
+      <li>
+        <p>Departure: <%= flight.departure_airport.code %></p>
+        <p>Arrival: <%= flight.arrival_airport.code %></p>
+        <p>Date: <%= flight.start_datetime %></p>
+        <p>Duration: <%= flight.duration/60%>h</p>
+        <%= radio_button(:book, :flight_id, flight.id)%>
+      </li>
+    <% end %>
+    <%= f.button :submit, "Book!" %>
+    <%= f.input :passengers, as: :hidden%>
+  <% end %>
+</ul>
