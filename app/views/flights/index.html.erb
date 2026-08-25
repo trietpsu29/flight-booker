@@ -4,7 +4,7 @@
   <%= f.input :arrival_airport, collection: @airports, label_method: :code, value_method: :id %>
   <%= f.input :start_datetime, collection: @flight_dates%>
   <%= f.input :passengers, collection: [1, 2, 3, 4] %>
-  <%= f.button :submit, "Search" %>
+  <p><%= f.button :submit, "Search" %></p>
 <% end %>
 <h2>Available Flights</h2>
 <ul>
@@ -15,10 +15,11 @@
         <p>Arrival: <%= flight.arrival_airport.code %></p>
         <p>Date: <%= flight.start_datetime %></p>
         <p>Duration: <%= flight.duration/60%>h</p>
-        <%= radio_button(:book, :flight_id, flight.id)%>
+        <p><%= f.radio_button :flight_id, flight.id %>
+          <%= f.label :flight_id, "Select this flight", value: flight.id %></p>
       </li>
     <% end %>
-    <%= f.button :submit, "Book!" %>
+    <p><%= f.button :submit, "Book!" %></p>
     <%= f.input :passengers, as: :hidden%>
   <% end %>
 </ul>
