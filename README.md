@@ -1,12 +1,15 @@
 # Flight Booker
 
-This is the project from [The Odin Project](https://www.theodinproject.com/) curriculum — a flight booking application built with **Ruby on Rails**, focusing on advanced forms, nested forms, and model associations.
+This is the project from [The Odin Project](https://www.theodinproject.com/) curriculum — a flight booking application built with **Ruby on Rails**, focusing on advanced forms, nested forms, model associations, and dynamic form interactions with **Stimulus**.
 
 ## Features
 
 - Search for available flights
 - Select a flight
 - Enter information for multiple passengers
+- Dynamically add passengers
+- Remove passengers from the booking form
+- Prevent removing the last passenger
 - Create bookings with associated passengers
 - Display booking information
 
@@ -32,6 +35,19 @@ This is the project from [The Odin Project](https://www.theodinproject.com/) cur
 - Model associations
 - Strong Parameters
 - RESTful routing
+- Creating and saving associated records
+
+### Stimulus & JavaScript
+
+- Stimulus controllers
+- Stimulus targets
+- Stimulus values
+- Stimulus actions
+- Handling DOM events with Stimulus
+- Dynamically adding and removing form fields
+- Using the HTML `<template>` element
+- Cloning and manipulating template content
+- Updating nested form indexes dynamically
 
 ## Challenges
 
@@ -39,4 +55,7 @@ This is the project from [The Odin Project](https://www.theodinproject.com/) cur
 - Prepopulating booking information from the selected flight
 - Creating multiple Passenger objects for one Booking
 - Handling nested passenger attributes
-- Saving a Booking and its associated Passengers together
+- Dynamically adding passenger fields with Stimulus
+- Dynamically removing passenger fields while preserving form submission
+- Using `<template>` to create reusable passenger field templates
+- Generating unique indexes for dynamically added nested form fields
