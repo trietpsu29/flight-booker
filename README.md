@@ -23,6 +23,10 @@ This is the project from [The Odin Project](https://www.theodinproject.com/) cur
 
 ![Booking form](screenshots/booking.png)
 
+### Email
+
+![Email](screenshots/email.png)
+
 ## Skills Learned
 
 ### Ruby on Rails
@@ -46,8 +50,15 @@ This is the project from [The Odin Project](https://www.theodinproject.com/) cur
 - Handling DOM events with Stimulus
 - Dynamically adding and removing form fields
 - Using the HTML `<template>` element
-- Cloning and manipulating template content
 - Updating nested form indexes dynamically
+
+### Action Mailer
+
+- Creating mailers and email views
+- Sending confirmation emails after booking
+- HTML and text email templates
+- Using `deliver_now` / `deliver_later`
+- Testing emails with Letter Opener
 
 ## Challenges
 
