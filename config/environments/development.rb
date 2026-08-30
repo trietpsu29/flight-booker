@@ -1,5 +1,7 @@
 require "active_support/core_ext/integer/time"
 
+ENV["BROWSER"] = "/home/triet/open-chrome"
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -77,4 +79,8 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true
+
+  LetterOpener.configure do |config|
+    config.file_uri_scheme = "file://wsl.localhost/Ubuntu"
+  end
 end
