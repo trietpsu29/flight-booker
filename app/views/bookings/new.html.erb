@@ -19,7 +19,7 @@
     <template data-passenger-target="template">
       <%= f.simple_fields_for :passengers, Passenger.new,child_index: "NEW" do |p| %>
         <div data-passenger-target="passenger">
-          <h3>Passenger NEW</h3>
+          <h3></h3>
           <p><%= p.input :name %></p>
           <p><%= p.input :email %></p>
           <button type="button" data-action="passenger#remove">
