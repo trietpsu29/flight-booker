@@ -21,7 +21,7 @@ This is the project from [The Odin Project](https://www.theodinproject.com/) cur
 
 ### Booking Form
 
-![Booking form](screenshots/booking.PNG)
+![Booking form](screenshots/booking.png)
 
 ## Skills Learned
 
